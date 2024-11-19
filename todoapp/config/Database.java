@@ -1,4 +1,4 @@
-package config;
+package todoapp.config;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -29,7 +29,7 @@ public class Database {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(String.format(mysqlConnUrlTemplate, host, port, dbName), userName, password);
-            System.out.println("Database connected!");
+            System.out.println("todoapp.config.Database connected!");
 
         } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
